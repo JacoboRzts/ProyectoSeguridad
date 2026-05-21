@@ -1,0 +1,16 @@
+\begin{code}{cpp}{Ejemplo de codigo en C++}
+static void getData(std::string path, std::vector<cv::Mat>& images, std::vector<std::string>& names, float scale){
+  for (const std::filesystem::directory_entry& entry : std::filesystem::directory_iterator(path)) {
+    std::string name = entry.path().filename().string();
+    names.push_back(name.substr(0, name.find('.')));
+    cv::Mat image = imread(path + name, cv::IMREAD_GRAYSCALE);
+    if (image.empty()) {
+      std::cerr << "Error the image vector provided at " << path + name << " is empty." << std::endl;
+    } else {
+      cv::Size size( std::round(image.cols * scale), std::round(image.rows * scale) );
+      cv::resize(image, image, size);
+      images.push_back(image);
+    }
+  }
+}
+\end{code}

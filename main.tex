@@ -1,0 +1,37 @@
+% !TeX program = xelatex
+\documentclass[a4paper]{article}
+
+\input{configuration/packages}
+\input{configuration/commands}
+\input{configuration/code}
+\input{configuration/style}
+
+% Metadata
+\title{Proyecto Final: Escenario de Consultoría de Seguridad Informática}
+\subtitle{Principios de Seguridad Informática}
+\author{
+  \textbf{Integrantes} \\
+  330086 - Palomo Gudiño Juan Carlos \\ 
+  327234 - Eduardo Hernández Torres \\ 
+  320327 - Samuel de Avila Páramo \\ 
+  306659 - Ricardo Adair Vidal Araujo \\ 
+  351022 - Jacobo Rodríguez Torres \\ 
+  \vspace{0.5cm}
+  20 de Mayo, 2026
+}
+
+\bibliography{content/references}
+
+\begin{document}
+
+  \input{content/cover}
+  \input{content/list}
+  \input{sections/antecedentes}
+  \input{sections/analisis}
+  \input{sections/propuesta}
+  \input{sections/conclusion}
+
+  \nocite{*} % citar todos las referencias
+  \printbibliography[heading=bibintoc, title={Bibliografía}] 
+
+\end{document}

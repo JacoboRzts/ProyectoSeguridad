@@ -1,0 +1,24 @@
+\setminted{
+    % Rompe cadenas muy largas en minted
+    style=friendly,
+    % Define el tema de la sintaxis, otras opciones: tango, vim, dracula, colorful, perldoc y bw
+    breaklines=true,
+}
+
+\tcbset{
+    colback=cgray,
+    colframe=cgray,
+    arc=4pt,
+}
+
+\newenvironment{code}[2]{%
+  \VerbatimEnvironment
+  \begin{listing}[H]
+  \caption{#2}
+  \begin{tcolorbox}
+  \begin{minted}{#1}%
+  }{%
+  \end{minted}
+  \end{tcolorbox}
+  \end{listing}
+}

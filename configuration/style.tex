@@ -1,0 +1,28 @@
+% Margenes 
+\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2cm}
+
+% Limpiar los encabezados y pies de página por defecto
+\pagestyle{fancy} \fancyhf{}
+
+% Eliminar offset derecho
+\fancyheadoffset[R]{0pt}
+
+% Header
+\fancyhead[L]{\small \thetitle }
+
+% Footer 
+\fancyfoot[C]{\small \thepage }
+
+% Estilo de footers/headers para una pagina con encabezados
+\fancypagestyle{header}{
+  \fancyhf{}  % Limpiar todo
+  \fancyhead[L]{ \textbf{UASLP} $\cdot$ Facultad de Ingeniería }
+  \fancyhead[R]{ \thesubtitle }
+  \fancyfoot[L]{ \today}
+}
+
+% Cuadro a tabla
+\addto\captionsspanish{
+    \renewcommand{\tablename}{Tabla}
+    \renewcommand{\listtablename}{Índice de tablas}
+}

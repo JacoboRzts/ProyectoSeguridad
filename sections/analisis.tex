@@ -1,0 +1,61 @@
+\section{Análisis de riesgos y plan de respuesta a riesgos}
+\subsection{Amenazas y Vulnerabilidades (El entorno hostil)}
+\subsubsection{1. Amenazas Ambientales (Entorno Físico)}
+\begin{itemize}
+    \item ¿Las computadoras están expuestas a polvo, rebaba de metal, calor extremo o lluvia? Polvo y calor extremo.
+    \item Energía: Al encender maquinaria pesada (compactadoras, grúas), ¿notan bajones de luz en las computadoras? (Esto daña discos duros). Casi todos los días, por eso se cuenta con un generador y electricista de respaldo.
+\end{itemize}
+\subsubsection{Amenazas Humanas (Fraude Interno)}
+\begin{itemize}
+    \item ¿Es posible que un operador modifique el peso en el sistema manualmente para pagar de más a un proveedor "amigo"? No.
+    \item ¿Comparten usuarios y contraseñas entre varios empleados de la báscula? Sí.
+\end{itemize}
+\subsubsection{2. Vulnerabilidades Técnicas}
+\begin{itemize}
+    \item ¿El software de la báscula es antiguo (ej. corre en Windows 7 o XP)? Sí.
+    \item ¿Si se va la luz o el internet, pueden seguir operando manualmente o se detiene la compra? Se detiene totalmente.
+\end{itemize}
+
+\subsection{Evaluación de Riesgo (Impacto y Probabilidad)}
+\subsubsection{1. Impacto en la Tríada CID}
+\begin{itemize}
+    \item \textbf{Integridad (Crítico):} Si alguien altera la base de datos de pesajes, ¿se dan cuenta inmediatamente o hasta el cierre de mes? Después del corte de semana.
+    \item \textbf{Disponibilidad:} Si el sistema de facturación falla un viernes de pago, ¿qué pasa con los proveedores? Se habla y se retrasa el pago.
+    \item \textbf{Confidencialidad:} Si la competencia supiera sus precios de compra o su lista de grandes proveedores industriales, ¿perderían negocio? No deben de conocerlos en la competencia.
+\end{itemize}
+\subsubsection{2. Probabilidad}
+\begin{itemize}
+    \item ¿Con qué frecuencia fallan los equipos por polvo o suciedad? Rara vez, pero ha pasado.
+    \item ¿Qué tan seguido reciben correos falsos de "facturas" (phishing) en el área administrativa? No casi no, o normalmente sólo ignoran los correos que no conocen.
+\end{itemize}
+
+\subsection{Controles y Tratamiento (Soluciones)}
+\subsubsection{1. Controles Actuales}
+\begin{itemize}
+    \item ¿Tienen UPS (No-Breaks) de grado industrial para las computadoras de operación? No.
+    \item ¿Se hacen respaldos de la base de datos de la báscula? ¿En dónde (USB, Nube, Disco externo)? En usb y nube, se considera empezar a usar disco duro externo este mes.
+\end{itemize}
+\subsubsection{2. Presupuesto y Viabilidad}
+\begin{itemize}
+    \item ¿Estarían dispuestos a invertir en equipos de "uso rudo" o prefieren reemplazar equipos baratos frecuentemente? Consideramos comprar máquinas de uso rudo.
+    \item ¿Tienen presupuesto para licencias de software original o trabajan con lo que venía en la PC? Con lo que venía la pc.
+\end{itemize}
+
+\subsection{Tips para tu Reporte (Caso Reciclaje)}
+\begin{itemize}
+    \item \textbf{Riesgo Top 1 (Integridad):} Modificación no autorizada de pesos/precios. Tratamiento: Controles de acceso lógico (usuarios únicos) y logs de auditoría. ¿Conocen este riesgo? Sí.
+    \item \textbf{Riesgo Top 2 (Disponibilidad):} Falla de hardware por entorno sucio/eléctrico. Tratamiento: Mantenimiento preventivo, UPS, ubicación física protegida. ¿Están protegidos? No están tan protegidos de este riesgo.
+    \item \textbf{Riesgo Top 3 (Legal/Confidencialidad):} Robo de datos de proveedores industriales. Tratamiento: Cifrado de discos o contratos de confidencialidad (NDAs). ¿Tienen cifrado? No, contrato de confidencialidad sí hay.
+\end{itemize}
+
+\input{sections/matriz.tex}
+
+\subsection{Costos de mejora}
+\begin{itemize}
+    \item No-Break CyberPower 1500VA: \$5,558.8
+    \item Windows 11 Pro (OEM): \$2,949.00
+    \item Antivirus (Anual): Eset NOD32 (5 Usuarios): \$889.00
+    \item Kit de Mantenimiento: \$300.0
+    \item Mano de Obra: \$800.0
+    \item \textbf{Estimado total: \$10,496.}
+\end{itemize}
